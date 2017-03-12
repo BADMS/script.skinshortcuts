@@ -873,6 +873,8 @@ class DataFunctions():
             return "[System.Platform.Windows | System.Platform.Linux] +! System.Platform.Linux.RaspberryPi"
 
         # General visibilities
+        elif action == "activatewindow(home)":
+            return "!Window.IsVisible(home)"
         elif action == "activatewindow(weather)" and int( KODIVERSION ) >= 17:
             return "!String.IsEmpty(Weather.Plugin)"
         elif action == "activatewindow(weather)":
